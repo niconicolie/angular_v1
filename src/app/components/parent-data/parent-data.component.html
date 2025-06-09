@@ -1,0 +1,5 @@
+<p>{{ name }}</p>
+<p *ngIf="name === 'Nicole'; else wrongName">Hey nic</p>
+<ng-template #wrongName>
+    <h2>You're not Nicole!</h2>
+  </ng-template>
