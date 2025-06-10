@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -9,6 +10,8 @@ import { EventsComponent } from './components/events/events.component';
 import { EmitterComponent } from './components/emitter/emitter.component';
 import { BooleanComponent } from './components/boolean/boolean.component';
 import { ListRenderComponent } from './components/list-render/list-render.component';
+import { PipesComponent } from './components/pipes/pipes.component';
+import { TwoWayBindingComponent } from './components/two-way-binding/two-way-binding.component';
 
 @NgModule({
   declarations: [
@@ -19,10 +22,13 @@ import { ListRenderComponent } from './components/list-render/list-render.compon
     EventsComponent,
     EmitterComponent,
     BooleanComponent,
-    ListRenderComponent
+    ListRenderComponent,
+    PipesComponent,
+    TwoWayBindingComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
