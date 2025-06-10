@@ -18,7 +18,7 @@ export class ItemDetailComponent implements OnInit {
   ngOnInit(): void {
     
   }
-
+/* corrigir */
   getItem(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
     console.log(id);
