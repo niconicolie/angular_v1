@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -12,6 +13,8 @@ import { BooleanComponent } from './components/boolean/boolean.component';
 import { ListRenderComponent } from './components/list-render/list-render.component';
 import { PipesComponent } from './components/pipes/pipes.component';
 import { TwoWayBindingComponent } from './components/two-way-binding/two-way-binding.component';
+
+import { AppRoutingModule } from './app.routing.module';
 
 @NgModule({
   declarations: [
@@ -27,8 +30,7 @@ import { TwoWayBindingComponent } from './components/two-way-binding/two-way-bin
     TwoWayBindingComponent,
   ],
   imports: [
-    BrowserModule,
-    FormsModule
+    BrowserModule, FormsModule, AppRoutingModule, HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

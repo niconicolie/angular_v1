@@ -8,15 +8,12 @@ import { TestService } from 'src/app/services/test.service';
   styleUrls: ['./list-render.component.css']
 })
 export class ListRenderComponent implements OnInit {
-  animals: Animal[] = [
-    { name: "Meg", type: "Dog", age: 6 },
-    { name: "Totê", type: "Cat", age: 8 }
-  ];
+  animals: Animal[] = [];
 
-  animalDetails = ""
+  animalDetails = '';
 
   constructor(private testService: TestService) {
-
+    this.getAnimals();
   }
 
   ngOnInit(): void {
@@ -31,8 +28,8 @@ export class ListRenderComponent implements OnInit {
     console.log('Removing animal...');
     this.animals = this.testService.remove(this.animals, animal);
   }
-}
-l) {
-  this.animalDetails = `${animal.name} is ${animal.age} years old`;
+
+  getAnimals(): void {
+    this.testService.getAll().subscribe((animals) => (this.animals = animals));
   }
 }
